@@ -10,6 +10,9 @@ urlpatterns = [
     
     # 'api/properties/' にアクセスした際に、propertyアプリのurls.pyに定義されたURLパターンを含める
     path('api/properties/', include('property.urls')),
+
+    # 'api/auth/' にアクセスした際に、useraccountアプリのurls.pyに定義されたURLパターンを含める
+    path('api/auth/', include('useraccount.urls')),
 ]
 
 # 開発環境でメディアファイル（画像など）にアクセスできるようにする設定
