@@ -69,11 +69,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     # 必須フィールド（スーパーユーザーを作成するときに必要）
     REQUIRED_FIELDS = ['name',]
 
-    # # アバター画像のURLを取得するメソッド
-    # def avatar_url(self):
-    #     # アバター画像が設定されている場合、そのURLを返す
-    #     if self.avatar:
-    #         return f'{settings.WEBSITE_URL}{self.avatar.url}'
-    #     else:
-    #         # 画像がない場合は空文字列を返す
-    #         return ''
+    # アバター画像のURLを取得するメソッド
+    def avatar_url(self):
+        # アバター画像が設定されている場合、そのURLを返す
+        if self.avatar:
+            return f'{settings.WEBSITE_URL}{self.avatar.url}'
+        else:
+            # 画像がない場合は空文字列を返す
+            return ''

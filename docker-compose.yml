@@ -28,6 +28,8 @@ services:
       - POSTGRES_USER=postgresuser
       - POSTGRES_PASSWORD=postgrespassword
       - POSTGRES_DB=djangobnb
+    ports:
+      - 5432:5432
 
 # データを永続化するためのボリュームを定義
 volumes:
